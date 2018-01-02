@@ -38,7 +38,7 @@ import io.reactivex.schedulers.Schedulers;
  */
 
 public class GankFuliNestFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, BaseQuickAdapter.RequestLoadMoreListener {
-    private static final int AMOUNT = 20;
+    private static final int AMOUNT = 20; //直接在这里设置大一点的数观察图片加载情况
 
     @BindView(R.id.swipeRefreshLayout)
     SwipeRefreshLayout swipeRefreshLayout;
@@ -118,13 +118,13 @@ public class GankFuliNestFragment extends BaseFragment implements SwipeRefreshLa
     @Override
     public void onLoadMoreRequested() {
 
-        rv.post(new Runnable() {
-            @Override
-            public void run() {
-                Log.w("TAG", "加载更多..");
-                loadData(AMOUNT, ++mPage);
-            }
-        });
+//        rv.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                Log.w("TAG", "加载更多..");
+//                loadData(AMOUNT, ++mPage);
+//            }
+//        });
 
     }
 
